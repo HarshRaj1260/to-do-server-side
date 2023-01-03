@@ -41,7 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 //     });
 // }
 
-app.use("/api", apiRouter);
+app.use("./api", apiRouter);
 app.use(express.static("public"));
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
